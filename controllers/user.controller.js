@@ -70,10 +70,42 @@ const usuariosDelete = async (req, res) => {
 }
 
 
+const login = async (req, res) => {
+    const { correo, password } = req.body;
+
+    const usuario = await Usuario.findOne({correo});
+
+    if(!usuario){
+        return res.status(400).json({
+            msg: 'Usuario / Password no son correctos - correo'
+        });
+    }
+
+    if(!usuario.estado){
+        return res.status(400).json({
+            msg: 'Usuario / Password no son correctos - estado: false'
+        });
+    }
+
+    const validPassword = bcryptjs.compareSync(password, usuario.password);
+
+    if(!validPassword){
+        return res.status(400).json({
+            msg: 'Usuario / Password no son correctos - password'
+        });
+    }
+
+    res.status(200).json({
+        msg: 'Login success'
+    });
+}
+
+
 module.exports = {
     usuariosDelete,
     usuariosPost,
     usuariosGet,
     getUsuarioByid,
-    usuariosPut
+    usuariosPut,
+    login
 }

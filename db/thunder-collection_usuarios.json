@@ -1,10 +1,24 @@
 {
     "client": "Thunder Client",
     "collectionName": "usuarios",
-    "dateExported": "2024-02-09T17:39:29.863Z",
+    "dateExported": "2024-02-09T17:56:27.948Z",
     "version": "1.1",
     "folders": [],
     "requests": [
+        {
+            "_id": "ce8a11d1-ee40-49e7-a1e0-1f9d6551816a",
+            "colId": "5ffb6f7f-e11c-4925-8487-e9a83b302d9a",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/api/Usuarios",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-02-09T17:50:56.106Z",
+            "modified": "2024-02-09T17:56:13.696Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
         {
             "_id": "4cf0e7cd-82bb-4873-8d3a-b975148b4a1e",
             "colId": "5ffb6f7f-e11c-4925-8487-e9a83b302d9a",
