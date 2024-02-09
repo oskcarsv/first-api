@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "mascotas",
+    "dateExported": "2024-02-09T17:39:08.044Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "198d6d15-0823-4159-8068-2b9bcf06c838",
+            "colId": "ffcfdfed-7c95-4d9f-b5ee-3a3f3d923bc5",
+            "containerId": "",
+            "name": "mascotas-post",
+            "url": "http://localhost:3000/api/Mascotas",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-09T16:23:28.710Z",
+            "modified": "2024-02-09T17:20:07.120Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"totto\",\n  \"edad\": \"9\",\n  \"raza\": \"doberman\",\n  \"sexo\": \"hembra\",\n  \"peso\": \"11kg\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e3ce0d7b-3282-4b91-806f-13804ed11e80",
+            "colId": "ffcfdfed-7c95-4d9f-b5ee-3a3f3d923bc5",
+            "containerId": "",
+            "name": "mascotas-get",
+            "url": "http://localhost:3000/api/Mascotas",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-09T17:15:12.287Z",
+            "modified": "2024-02-09T17:15:20.157Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d953f5f6-dd7d-46c8-a99c-d598ee518824",
+            "colId": "ffcfdfed-7c95-4d9f-b5ee-3a3f3d923bc5",
+            "containerId": "",
+            "name": "getMascotaById",
+            "url": "http://localhost:3000/api/Mascotas/65c65bff5472788df24fa84a",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-09T17:20:34.476Z",
+            "modified": "2024-02-09T17:28:24.773Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4b7315c8-e3d7-48f6-9d95-beab274b88c1",
+            "colId": "ffcfdfed-7c95-4d9f-b5ee-3a3f3d923bc5",
+            "containerId": "",
+            "name": "putMascota",
+            "url": "http://localhost:3000/api/Mascotas/65c65bff5472788df24fa84a",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-09T17:21:06.701Z",
+            "modified": "2024-02-09T17:29:35.661Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"pancho\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "11785758-78af-418c-9916-344df185e7b5",
+            "colId": "ffcfdfed-7c95-4d9f-b5ee-3a3f3d923bc5",
+            "containerId": "",
+            "name": "mascotaDelete",
+            "url": "http://localhost:3000/api/Mascotas/65c65bff5472788df24fa84a",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-09T17:23:24.917Z",
+            "modified": "2024-02-09T17:29:46.493Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

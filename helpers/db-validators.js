@@ -18,7 +18,7 @@ const existeUsuarioById = async ( id = '') => {
 const esRolValido = async (role='') => {
     const existeRol = await Role.findOne({role});
 
-    if(!existeRol){
+    if(existeRol){
         throw new Error(`This role ${ role } not exists in database.` )
     }
 }

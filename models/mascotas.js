@@ -1,4 +1,6 @@
 const { Schema, model} = require('mongoose');
+const Usuario = require('../models/usuario');
+
 
 const MascotaSchema = Schema ({
     nombre: {
@@ -19,20 +21,12 @@ const MascotaSchema = Schema ({
     },
     peso: {
         type: String,
-        required: [true, 'Wight of the pet is required'],
-    },
-    img:{
-        type: String
+        required: [true, 'Weigt of the pet is required'],
     },
     estado:{
         type: Boolean,
         default: true
     },
-    usuario:{
-        type: Schema.Types.ObjectId,
-        ref: 'Usuario',
-        required: true
-    }
 });
 
 

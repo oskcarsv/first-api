@@ -10,6 +10,17 @@ const router = Router();
 
 router.get("/", usuariosGet);
 
+router.post(
+    "/", 
+    [
+        check("nombre","Name is required").not().isEmpty(),
+        check("password","El password debe ser mayor a 6 caracteres").isLength({min: 6,}),
+        check("correo","This email is not avaible").isEmail(),
+        check("correo").custom(existenteEmail),
+        check("role").custom(esRolValido),
+        validarCampos,
+    ], usuariosPost); 
+
 router.get(
     "/:id",
     [
@@ -33,17 +44,5 @@ router.delete(
             check("id").custom(existeUsuarioById),
             validarCampos
         ], usuariosDelete);
-
-        
-router.post(
-    "/", 
-    [
-        check("nombre","Name is required").not().isEmpty(),
-        check("password","El password debe ser mayor a 6 caracteres").isLength({min: 6,}),
-        check("correo","This email is not avaible").isEmail(),
-        check("correo").custom(existenteEmail),
-        check("role").custom(esRolValido),
-        validarCampos,
-    ], usuariosPost); 
 
 module.exports = router;
